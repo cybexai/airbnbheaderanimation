@@ -26,12 +26,15 @@ const headerY = Animated.interpolate(diffClampScrollY,{
 export default class App extends React.Component {
     
   render() {
+    
     return(
       <View style={{flex:1}}>
 
+      <StatusBar backgroundColor="#139c9b" barStyle="light-content" />
+
       <Animated.View style={styles.header}> 
 
-      <Text>Animated Header</Text>
+      <Text style={styles.headerText}>My Galeria del Africana</Text>
 
       </Animated.View>
 
@@ -69,7 +72,7 @@ const styles = StyleSheet.create({
     right: 0,
     top: 0,
     height: HEADER_HEIGHT,
-    backgroundColor: 'grey',
+    backgroundColor: '#139c9b',
     zIndex: 1000,
     elevation: 1000,
     transform: [{ translateY: headerY }],
@@ -84,5 +87,9 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     paddingTop: HEADER_HEIGHT
+  },
+  headerText: {
+    fontSize: 25,
+    color: '#fff'
   }
 })
